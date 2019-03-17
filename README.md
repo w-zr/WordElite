@@ -1,6 +1,9 @@
 # WordElite
 
 ## Todo
-Roles
-  --Player
-  --Queser
+
+### Roles
+
+  * Player
+  
+  * Queser
