@@ -4,7 +4,9 @@
 CMakeFiles/Game.dir/main.cpp.o
  /home/wey/文档/repositories/Game/AddUserTransaction.h
  /home/wey/文档/repositories/Game/ChangeRoleTransactino.h
+ /home/wey/文档/repositories/Game/GetInfoTransaction.h
  /home/wey/文档/repositories/Game/ListAllTransaction.h
+ /home/wey/文档/repositories/Game/LoginTransaction.h
  /home/wey/文档/repositories/Game/Player.h
  /home/wey/文档/repositories/Game/PlayerDatabase.h
  /home/wey/文档/repositories/Game/Questioner.h

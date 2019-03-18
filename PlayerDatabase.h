@@ -5,8 +5,6 @@
 #ifndef GAME_PLAYERDATABASE_H
 #define GAME_PLAYERDATABASE_H
 
-#include <memory>
-#include <map>
 #include "Player.h"
 
 class PlayerDatabase {

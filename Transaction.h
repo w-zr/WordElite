@@ -5,14 +5,9 @@
 #ifndef GAME_TRANSACTION_H
 #define GAME_TRANSACTION_H
 
-#include <iostream>
-#include <string>
-#include <map>
-
+#include "QuestionerDatabase.h"
 #include "PlayerDatabase.h"
 #include "UserDatabase.h"
-#include "User.h"
-
 
 class Transaction {
 public:

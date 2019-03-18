@@ -5,7 +5,6 @@
 #ifndef GAME_USER_H
 #define GAME_USER_H
 
-#include <utility>
 #include "Role.h"
 
 class User {

@@ -5,9 +5,6 @@
 #ifndef GAME_USERDATABASE_H
 #define GAME_USERDATABASE_H
 
-#include <iostream>
-#include <memory>
-#include <map>
 #include "User.h"
 
 class User;

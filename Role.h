@@ -5,7 +5,10 @@
 #ifndef GAME_ROLE_H
 #define GAME_ROLE_H
 
+#include <iostream>
 #include <string>
+#include <memory>
+#include <map>
 
 class Role {
 public:

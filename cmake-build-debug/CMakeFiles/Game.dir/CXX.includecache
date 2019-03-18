@@ -9,16 +9,20 @@
 /home/wey/文档/repositories/Game/AddUserTransaction.h
 Transaction.h
 /home/wey/文档/repositories/Game/Transaction.h
-QuestionerDatabase.h
-/home/wey/文档/repositories/Game/QuestionerDatabase.h
 
 /home/wey/文档/repositories/Game/ChangeRoleTransactino.h
-utility
--
+Transaction.h
+/home/wey/文档/repositories/Game/Transaction.h
+
+/home/wey/文档/repositories/Game/GetInfoTransaction.h
 Transaction.h
 /home/wey/文档/repositories/Game/Transaction.h
 
 /home/wey/文档/repositories/Game/ListAllTransaction.h
+Transaction.h
+/home/wey/文档/repositories/Game/Transaction.h
+
+/home/wey/文档/repositories/Game/LoginTransaction.h
 Transaction.h
 /home/wey/文档/repositories/Game/Transaction.h
 
@@ -27,10 +31,6 @@ Role.h
 /home/wey/文档/repositories/Game/Role.h
 
 /home/wey/文档/repositories/Game/PlayerDatabase.h
-memory
--
-map
--
 Player.h
 /home/wey/文档/repositories/Game/Player.h
 
@@ -39,10 +39,6 @@ Role.h
 /home/wey/文档/repositories/Game/Role.h
 
 /home/wey/文档/repositories/Game/QuestionerDatabase.h
-memory
--
-map
--
 Questioner.h
 /home/wey/文档/repositories/Game/Questioner.h
 
@@ -53,58 +49,44 @@ Transaction.h
 /home/wey/文档/repositories/Game/Transaction.h
 
 /home/wey/文档/repositories/Game/Role.h
-string
--
-
-/home/wey/文档/repositories/Game/Transaction.h
 iostream
 -
 string
 -
+memory
+-
 map
 -
+
+/home/wey/文档/repositories/Game/Transaction.h
+QuestionerDatabase.h
+/home/wey/文档/repositories/Game/QuestionerDatabase.h
 PlayerDatabase.h
 /home/wey/文档/repositories/Game/PlayerDatabase.h
 UserDatabase.h
 /home/wey/文档/repositories/Game/UserDatabase.h
-User.h
-/home/wey/文档/repositories/Game/User.h
 
 /home/wey/文档/repositories/Game/User.h
-utility
--
 Role.h
 /home/wey/文档/repositories/Game/Role.h
 
 /home/wey/文档/repositories/Game/UserDatabase.h
-iostream
--
-memory
--
-map
--
 User.h
 /home/wey/文档/repositories/Game/User.h
 
 /home/wey/文档/repositories/Game/main.cpp
-iostream
--
 unistd.h
 -
-memory
--
-User.h
-/home/wey/文档/repositories/Game/User.h
-AddUserTransaction.h
-/home/wey/文档/repositories/Game/AddUserTransaction.h
-UserDatabase.h
-/home/wey/文档/repositories/Game/UserDatabase.h
-ListAllTransaction.h
-/home/wey/文档/repositories/Game/ListAllTransaction.h
 Receiver.h
 /home/wey/文档/repositories/Game/Receiver.h
+LoginTransaction.h
+/home/wey/文档/repositories/Game/LoginTransaction.h
 ChangeRoleTransactino.h
 /home/wey/文档/repositories/Game/ChangeRoleTransactino.h
-QuestionerDatabase.h
-/home/wey/文档/repositories/Game/QuestionerDatabase.h
+ListAllTransaction.h
+/home/wey/文档/repositories/Game/ListAllTransaction.h
+AddUserTransaction.h
+/home/wey/文档/repositories/Game/AddUserTransaction.h
+GetInfoTransaction.h
+/home/wey/文档/repositories/Game/GetInfoTransaction.h
 

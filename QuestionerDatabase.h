@@ -5,8 +5,6 @@
 #ifndef GAME_QUESTIONERDATABASE_H
 #define GAME_QUESTIONERDATABASE_H
 
-#include <memory>
-#include <map>
 #include "Questioner.h"
 
 class QuestionerDatabase {

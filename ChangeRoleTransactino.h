@@ -1,5 +1,3 @@
-#include <utility>
-
 //
 // Created by wey on 19-3-18.
 //
@@ -9,20 +7,29 @@
 
 #include "Transaction.h"
 
-
-extern std::shared_ptr<User> user;
 class ChangeRoleTransaction : public Transaction {
 public:
     ~ChangeRoleTransaction() override = default;
 
-    explicit ChangeRoleTransaction(std::shared_ptr<Role> role) : role(std::move(role)) {}
-
     void Execute() override {
-        user->SetRole(role);
-    }
+        extern std::shared_ptr<User> user;
 
-private:
-    std::shared_ptr<Role> role;
+        std::cout << "Input the role you want to be(Player/Questioner): ";
+        std::string r;
+        std::cin >> r;
+        std::shared_ptr<Role> role;
+        if (r == "Player")
+            role = GPlayerDatabase.FindByUID(user->GetUID());
+        else if (r == "Questioner") {
+            role = GQuestionerDatabase.FindByUID(user->GetUID());
+        } else {
+            std::cout << "invalid role! try again..." << std::endl;
+            return;
+        }
+
+        user->SetRole(role);
+        std::cout << "Your role is changed to " << role->GetRole() << std::endl;
+    }
 };
 
 

@@ -88,7 +88,13 @@
 		<Unit filename="/home/wey/文档/repositories/Game/ChangeRoleTransactino.h">
 			<Option target="Game"/>
 		</Unit>
+		<Unit filename="/home/wey/文档/repositories/Game/GetInfoTransaction.h">
+			<Option target="Game"/>
+		</Unit>
 		<Unit filename="/home/wey/文档/repositories/Game/ListAllTransaction.h">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="/home/wey/文档/repositories/Game/LoginTransaction.h">
 			<Option target="Game"/>
 		</Unit>
 		<Unit filename="/home/wey/文档/repositories/Game/Player.h">

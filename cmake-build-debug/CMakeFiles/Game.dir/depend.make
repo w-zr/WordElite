@@ -3,7 +3,9 @@
 
 CMakeFiles/Game.dir/main.cpp.o: ../AddUserTransaction.h
 CMakeFiles/Game.dir/main.cpp.o: ../ChangeRoleTransactino.h
+CMakeFiles/Game.dir/main.cpp.o: ../GetInfoTransaction.h
 CMakeFiles/Game.dir/main.cpp.o: ../ListAllTransaction.h
+CMakeFiles/Game.dir/main.cpp.o: ../LoginTransaction.h
 CMakeFiles/Game.dir/main.cpp.o: ../Player.h
 CMakeFiles/Game.dir/main.cpp.o: ../PlayerDatabase.h
 CMakeFiles/Game.dir/main.cpp.o: ../Questioner.h
