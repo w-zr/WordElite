@@ -9,6 +9,14 @@
 /home/wey/文档/repositories/Game/AddUserTransaction.h
 Transaction.h
 /home/wey/文档/repositories/Game/Transaction.h
+QuestionerDatabase.h
+/home/wey/文档/repositories/Game/QuestionerDatabase.h
+
+/home/wey/文档/repositories/Game/ChangeRoleTransactino.h
+utility
+-
+Transaction.h
+/home/wey/文档/repositories/Game/Transaction.h
 
 /home/wey/文档/repositories/Game/ListAllTransaction.h
 Transaction.h
@@ -18,6 +26,26 @@ Transaction.h
 Role.h
 /home/wey/文档/repositories/Game/Role.h
 
+/home/wey/文档/repositories/Game/PlayerDatabase.h
+memory
+-
+map
+-
+Player.h
+/home/wey/文档/repositories/Game/Player.h
+
+/home/wey/文档/repositories/Game/Questioner.h
+Role.h
+/home/wey/文档/repositories/Game/Role.h
+
+/home/wey/文档/repositories/Game/QuestionerDatabase.h
+memory
+-
+map
+-
+Questioner.h
+/home/wey/文档/repositories/Game/Questioner.h
+
 /home/wey/文档/repositories/Game/Receiver.h
 vector
 -
@@ -25,6 +53,8 @@ Transaction.h
 /home/wey/文档/repositories/Game/Transaction.h
 
 /home/wey/文档/repositories/Game/Role.h
+string
+-
 
 /home/wey/文档/repositories/Game/Transaction.h
 iostream
@@ -33,6 +63,8 @@ string
 -
 map
 -
+PlayerDatabase.h
+/home/wey/文档/repositories/Game/PlayerDatabase.h
 UserDatabase.h
 /home/wey/文档/repositories/Game/UserDatabase.h
 User.h
@@ -41,20 +73,8 @@ User.h
 /home/wey/文档/repositories/Game/User.h
 utility
 -
-utility
--
-utility
--
-utility
--
-utility
--
-utility
--
 Role.h
 /home/wey/文档/repositories/Game/Role.h
-Player.h
-/home/wey/文档/repositories/Game/Player.h
 
 /home/wey/文档/repositories/Game/UserDatabase.h
 iostream
@@ -83,4 +103,8 @@ ListAllTransaction.h
 /home/wey/文档/repositories/Game/ListAllTransaction.h
 Receiver.h
 /home/wey/文档/repositories/Game/Receiver.h
+ChangeRoleTransactino.h
+/home/wey/文档/repositories/Game/ChangeRoleTransactino.h
+QuestionerDatabase.h
+/home/wey/文档/repositories/Game/QuestionerDatabase.h
 

@@ -2,12 +2,4 @@
 
 ## Todo
 
-### Roles
-
-* Player
-  
-* Queser
-
-### Receiver
-
-* Receive the commands from the prompt
+* Change "login" and "myinfo" into Transactions.

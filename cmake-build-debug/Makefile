@@ -123,87 +123,6 @@ Game/fast:
 	$(MAKE) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/build
 .PHONY : Game/fast
 
-Player.o: Player.cpp.o
-
-.PHONY : Player.o
-
-# target to build an object file
-Player.cpp.o:
-	$(MAKE) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/Player.cpp.o
-.PHONY : Player.cpp.o
-
-Player.i: Player.cpp.i
-
-.PHONY : Player.i
-
-# target to preprocess a source file
-Player.cpp.i:
-	$(MAKE) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/Player.cpp.i
-.PHONY : Player.cpp.i
-
-Player.s: Player.cpp.s
-
-.PHONY : Player.s
-
-# target to generate assembly for a file
-Player.cpp.s:
-	$(MAKE) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/Player.cpp.s
-.PHONY : Player.cpp.s
-
-Queser.o: Queser.cpp.o
-
-.PHONY : Queser.o
-
-# target to build an object file
-Queser.cpp.o:
-	$(MAKE) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/Queser.cpp.o
-.PHONY : Queser.cpp.o
-
-Queser.i: Queser.cpp.i
-
-.PHONY : Queser.i
-
-# target to preprocess a source file
-Queser.cpp.i:
-	$(MAKE) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/Queser.cpp.i
-.PHONY : Queser.cpp.i
-
-Queser.s: Queser.cpp.s
-
-.PHONY : Queser.s
-
-# target to generate assembly for a file
-Queser.cpp.s:
-	$(MAKE) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/Queser.cpp.s
-.PHONY : Queser.cpp.s
-
-UserDatabase.o: UserDatabase.cpp.o
-
-.PHONY : UserDatabase.o
-
-# target to build an object file
-UserDatabase.cpp.o:
-	$(MAKE) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/UserDatabase.cpp.o
-.PHONY : UserDatabase.cpp.o
-
-UserDatabase.i: UserDatabase.cpp.i
-
-.PHONY : UserDatabase.i
-
-# target to preprocess a source file
-UserDatabase.cpp.i:
-	$(MAKE) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/UserDatabase.cpp.i
-.PHONY : UserDatabase.cpp.i
-
-UserDatabase.s: UserDatabase.cpp.s
-
-.PHONY : UserDatabase.s
-
-# target to generate assembly for a file
-UserDatabase.cpp.s:
-	$(MAKE) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/UserDatabase.cpp.s
-.PHONY : UserDatabase.cpp.s
-
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -240,15 +159,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... Game"
 	@echo "... edit_cache"
-	@echo "... Player.o"
-	@echo "... Player.i"
-	@echo "... Player.s"
-	@echo "... Queser.o"
-	@echo "... Queser.i"
-	@echo "... Queser.s"
-	@echo "... UserDatabase.o"
-	@echo "... UserDatabase.i"
-	@echo "... UserDatabase.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

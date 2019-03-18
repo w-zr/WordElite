@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/Game.dir/main.cpp.o CMakeFiles/Game.dir/UserDatabase.cpp.o CMakeFiles/Game.dir/Player.cpp.o CMakeFiles/Game.dir/Queser.cpp.o  -o Game 
+/usr/bin/c++  -g   CMakeFiles/Game.dir/main.cpp.o  -o Game 

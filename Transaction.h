@@ -9,6 +9,7 @@
 #include <string>
 #include <map>
 
+#include "PlayerDatabase.h"
 #include "UserDatabase.h"
 #include "User.h"
 

@@ -1,15 +1,3 @@
-#include <utility>
-
-#include <utility>
-
-#include <utility>
-
-#include <utility>
-
-#include <utility>
-
-
-
 //
 // Created by wey on 19-3-17.
 //
@@ -19,20 +7,17 @@
 
 #include <utility>
 #include "Role.h"
-#include "Player.h"
 
 class User {
 private:
     int UID;
     std::string name;
     std::string pass;
-    Role *role{};
+    std::shared_ptr<Role> role{};
 public:
     User(int UID, std::string name, std::string pass) : UID(UID), name(std::move(name)), pass(std::move(pass)) {}
 
-    ~User() {
-        delete role;
-    }
+    ~User() = default;
 
     void SetUID(int u) {
         UID = u;
@@ -58,12 +43,11 @@ public:
         return pass;
     }
 
-    void SetRole(Role *r) {
-        delete role;
-        role = r;
+    void SetRole(std::shared_ptr<Role> r) {
+        role = std::move(r);
     }
 
-    Role *GetRole() {
+    std::shared_ptr<Role> GetRole() {
         return role;
     }
 

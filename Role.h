@@ -5,11 +5,12 @@
 #ifndef GAME_ROLE_H
 #define GAME_ROLE_H
 
+#include <string>
 
 class Role {
 public:
-    virtual ~Role() = 0;
+    virtual ~Role() = default;
+    virtual std::string GetRole() = 0;
 };
-
 
 #endif //GAME_ROLE_H

@@ -6,6 +6,7 @@
 #define GAME_ADDUSERTRANSACTION_H
 
 #include "Transaction.h"
+#include "QuestionerDatabase.h"
 
 static auto IN_UID = 0;
 
@@ -22,15 +23,14 @@ private:
     std::string pass;
 };
 
-extern UserDatabase GUserDatabase;
 void AddUserTransaction::Execute() {
-    std::shared_ptr<User> e = GUserDatabase.FindByUsername(name);
-    if (e != nullptr) {
+    if (GUserDatabase.FindByUsername(name) != nullptr) {
         std::cout << "User " << name << " already exists." << std::endl;
         return;
     }
-    e = std::make_shared<User>(UID, name, pass);
-    GUserDatabase.addUser(UID, e);
+    GUserDatabase.addUser(UID, std::make_shared<User>(UID, name, pass));
+    GPlayerDatabase.addPlayer(UID, std::make_shared<Player>(0, 0, 0));
+    GQuestionerDatabase.addQuestioner(UID, std::make_shared<Questioner>(0, 0));
 }
 
 #endif //GAME_ADDUSERTRANSACTION_H

@@ -85,22 +85,22 @@
 		<Unit filename="/home/wey/文档/repositories/Game/AddUserTransaction.h">
 			<Option target="Game"/>
 		</Unit>
+		<Unit filename="/home/wey/文档/repositories/Game/ChangeRoleTransactino.h">
+			<Option target="Game"/>
+		</Unit>
 		<Unit filename="/home/wey/文档/repositories/Game/ListAllTransaction.h">
-			<Option target="Game"/>
-		</Unit>
-		<Unit filename="/home/wey/文档/repositories/Game/LoginTransaction.h">
-			<Option target="Game"/>
-		</Unit>
-		<Unit filename="/home/wey/文档/repositories/Game/Player.cpp">
 			<Option target="Game"/>
 		</Unit>
 		<Unit filename="/home/wey/文档/repositories/Game/Player.h">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="/home/wey/文档/repositories/Game/Queser.cpp">
+		<Unit filename="/home/wey/文档/repositories/Game/PlayerDatabase.h">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="/home/wey/文档/repositories/Game/Queser.h">
+		<Unit filename="/home/wey/文档/repositories/Game/Questioner.h">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="/home/wey/文档/repositories/Game/QuestionerDatabase.h">
 			<Option target="Game"/>
 		</Unit>
 		<Unit filename="/home/wey/文档/repositories/Game/Receiver.h">
@@ -113,9 +113,6 @@
 			<Option target="Game"/>
 		</Unit>
 		<Unit filename="/home/wey/文档/repositories/Game/User.h">
-			<Option target="Game"/>
-		</Unit>
-		<Unit filename="/home/wey/文档/repositories/Game/UserDatabase.cpp">
 			<Option target="Game"/>
 		</Unit>
 		<Unit filename="/home/wey/文档/repositories/Game/UserDatabase.h">

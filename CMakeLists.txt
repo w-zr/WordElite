@@ -3,4 +3,4 @@ project(Game)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Game main.cpp Transaction.h UserDatabase.cpp UserDatabase.h User.h AddUserTransaction.h Role.h Player.cpp Player.h Queser.cpp Queser.h ListAllTransaction.h Receiver.h LoginTransaction.h)
+add_executable(Game main.cpp Transaction.h UserDatabase.h User.h AddUserTransaction.h Role.h Player.h Questioner.h ListAllTransaction.h Receiver.h PlayerDatabase.h ChangeRoleTransactino.h QuestionerDatabase.h)

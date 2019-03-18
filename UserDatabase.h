@@ -14,11 +14,11 @@ class User;
 
 class UserDatabase {
 public:
-    virtual ~UserDatabase();
+    virtual ~UserDatabase() = default;
 
-    std::shared_ptr<User> GetUser(int UID);
+    std::shared_ptr<User> FindByUID(int UID);
 
-    std::shared_ptr<User> FindByUsername(const std::string& username);
+    std::shared_ptr<User> FindByUsername(const std::string &username);
 
     std::map<int, std::shared_ptr<User>> GetUsers() { return Users; };
 
@@ -29,6 +29,25 @@ public:
 private:
     std::map<int, std::shared_ptr<User>> Users;
 };
+
+UserDatabase GUserDatabase;
+
+std::shared_ptr<User> UserDatabase::FindByUID(int UID){
+    if (Users.find(UID) != Users.end())
+        return Users.find(UID)->second;
+    return nullptr;
+}
+
+void UserDatabase::addUser(int UID, std::shared_ptr<User> e) {
+    Users[UID] = std::move(e);
+}
+
+std::shared_ptr<User> UserDatabase::FindByUsername(const std::string &username) {
+    for (auto &it : GUserDatabase.GetUsers())
+        if (it.second->GetName() == username)
+            return it.second;
+    return nullptr;
+}
 
 
 #endif //GAME_USERDATABASE_H
