@@ -5,25 +5,29 @@
 #ifndef GAME_USERDATABASE_H
 #define GAME_USERDATABASE_H
 
+#include <iostream>
+#include <memory>
 #include <map>
+#include "User.h"
+
 class User;
 
 class UserDatabase {
 public:
     virtual ~UserDatabase();
 
-    User *GetUser(int UID);
+    std::shared_ptr<User> GetUser(int UID);
 
-    void PrintAllUser();
+    std::shared_ptr<User> FindByUsername(const std::string& username);
 
-    std::map<int, User *> GetUsers() { return Users; };
+    std::map<int, std::shared_ptr<User>> GetUsers() { return Users; };
 
-    void addUser(int UID, User *);
+    void addUser(int UID, std::shared_ptr<User>);
 
     void clear() { Users.clear(); }
 
 private:
-    std::map<int, User *> Users;
+    std::map<int, std::shared_ptr<User>> Users;
 };
 
 

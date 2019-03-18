@@ -4,6 +4,10 @@
 
 #include <utility>
 
+#include <utility>
+
+#include <utility>
+
 
 
 //
@@ -46,6 +50,14 @@ public:
         return name;
     }
 
+    void SetPass(std::string p) {
+        pass = std::move(p);
+    }
+
+    const std::string GetPass() {
+        return pass;
+    }
+
     void SetRole(Role *r) {
         delete role;
         role = r;
@@ -54,6 +66,8 @@ public:
     Role *GetRole() {
         return role;
     }
+
+    User& operator=(const User &u) = default;
 };
 
 

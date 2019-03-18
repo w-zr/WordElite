@@ -1,4 +1,4 @@
-/home/wey/clion-2018.3.4/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/wey/文档/coding/Game
+/home/wey/clion-2018.3.4/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/wey/文档/repositories/Game
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/wey/文档/coding/Game/cmake-build-debug
+-- Build files have been written to: /home/wey/文档/repositories/Game/cmake-build-debug

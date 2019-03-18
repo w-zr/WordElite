@@ -8,28 +8,28 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/wey/文档/coding/Game/cmake-build-debug"/>
+				<Option working_dir="/home/wey/文档/repositories/Game/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/wey/文档/coding/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/wey/文档/coding/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/wey/文档/coding/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/wey/文档/coding/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/wey/文档/repositories/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/wey/文档/repositories/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/wey/文档/repositories/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/wey/文档/repositories/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/wey/文档/coding/Game/cmake-build-debug"/>
+				<Option working_dir="/home/wey/文档/repositories/Game/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/wey/文档/coding/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/wey/文档/coding/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/wey/文档/coding/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/wey/文档/coding/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/wey/文档/repositories/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/wey/文档/repositories/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/wey/文档/repositories/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/wey/文档/repositories/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Game">
-				<Option output="/home/wey/文档/coding/Game/cmake-build-debug/Game" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/wey/文档/coding/Game/cmake-build-debug"/>
+				<Option output="/home/wey/文档/repositories/Game/cmake-build-debug/Game" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/wey/文档/repositories/Game/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -43,15 +43,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/wey/文档/coding/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 Game"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/wey/文档/coding/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/wey/文档/coding/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/wey/文档/coding/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/wey/文档/repositories/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 Game"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/wey/文档/repositories/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/wey/文档/repositories/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/wey/文档/repositories/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Game/fast">
-				<Option output="/home/wey/文档/coding/Game/cmake-build-debug/Game" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/wey/文档/coding/Game/cmake-build-debug"/>
+				<Option output="/home/wey/文档/repositories/Game/cmake-build-debug/Game" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/wey/文档/repositories/Game/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -65,69 +65,66 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/wey/文档/coding/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 Game/fast"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/wey/文档/coding/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/wey/文档/coding/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/wey/文档/coding/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/wey/文档/repositories/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 Game/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/wey/文档/repositories/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/wey/文档/repositories/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/wey/文档/repositories/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/wey/文档/coding/Game/cmake-build-debug"/>
+				<Option working_dir="/home/wey/文档/repositories/Game/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/wey/文档/coding/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/wey/文档/coding/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/wey/文档/coding/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/wey/文档/coding/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/wey/文档/repositories/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/wey/文档/repositories/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/wey/文档/repositories/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/wey/文档/repositories/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/wey/文档/coding/Game/AddUserTransaction.cpp">
+		<Unit filename="/home/wey/文档/repositories/Game/AddUserTransaction.h">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="/home/wey/文档/coding/Game/AddUserTransaction.h">
+		<Unit filename="/home/wey/文档/repositories/Game/ListAllTransaction.h">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="/home/wey/文档/coding/Game/FindAllTransaction.cpp">
+		<Unit filename="/home/wey/文档/repositories/Game/LoginTransaction.h">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="/home/wey/文档/coding/Game/FindAllTransaction.h">
+		<Unit filename="/home/wey/文档/repositories/Game/Player.cpp">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="/home/wey/文档/coding/Game/FindTransaction.h">
+		<Unit filename="/home/wey/文档/repositories/Game/Player.h">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="/home/wey/文档/coding/Game/Player.cpp">
+		<Unit filename="/home/wey/文档/repositories/Game/Queser.cpp">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="/home/wey/文档/coding/Game/Player.h">
+		<Unit filename="/home/wey/文档/repositories/Game/Queser.h">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="/home/wey/文档/coding/Game/Queser.cpp">
+		<Unit filename="/home/wey/文档/repositories/Game/Receiver.h">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="/home/wey/文档/coding/Game/Queser.h">
+		<Unit filename="/home/wey/文档/repositories/Game/Role.h">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="/home/wey/文档/coding/Game/Role.h">
+		<Unit filename="/home/wey/文档/repositories/Game/Transaction.h">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="/home/wey/文档/coding/Game/Transaction.h">
+		<Unit filename="/home/wey/文档/repositories/Game/User.h">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="/home/wey/文档/coding/Game/User.h">
+		<Unit filename="/home/wey/文档/repositories/Game/UserDatabase.cpp">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="/home/wey/文档/coding/Game/UserDatabase.cpp">
+		<Unit filename="/home/wey/文档/repositories/Game/UserDatabase.h">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="/home/wey/文档/coding/Game/UserDatabase.h">
+		<Unit filename="/home/wey/文档/repositories/Game/main.cpp">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="/home/wey/文档/coding/Game/main.cpp">
-			<Option target="Game"/>
-		</Unit>
-		<Unit filename="/home/wey/文档/coding/Game/CMakeLists.txt">
+		<Unit filename="/home/wey/文档/repositories/Game/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

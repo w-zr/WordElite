@@ -4,6 +4,10 @@
 
 ### Roles
 
-  * Player
+* Player
   
-  * Queser
+* Queser
+
+### Receiver
+
+* Receive the commands from the prompt

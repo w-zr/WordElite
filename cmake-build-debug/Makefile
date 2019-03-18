@@ -48,10 +48,10 @@ RM = /home/wey/clion-2018.3.4/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/wey/文档/coding/Game
+CMAKE_SOURCE_DIR = /home/wey/文档/repositories/Game
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/wey/文档/coding/Game/cmake-build-debug
+CMAKE_BINARY_DIR = /home/wey/文档/repositories/Game/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wey/文档/coding/Game/cmake-build-debug/CMakeFiles /home/wey/文档/coding/Game/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wey/文档/repositories/Game/cmake-build-debug/CMakeFiles /home/wey/文档/repositories/Game/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wey/文档/coding/Game/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wey/文档/repositories/Game/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -122,60 +122,6 @@ Game: cmake_check_build_system
 Game/fast:
 	$(MAKE) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/build
 .PHONY : Game/fast
-
-AddUserTransaction.o: AddUserTransaction.cpp.o
-
-.PHONY : AddUserTransaction.o
-
-# target to build an object file
-AddUserTransaction.cpp.o:
-	$(MAKE) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/AddUserTransaction.cpp.o
-.PHONY : AddUserTransaction.cpp.o
-
-AddUserTransaction.i: AddUserTransaction.cpp.i
-
-.PHONY : AddUserTransaction.i
-
-# target to preprocess a source file
-AddUserTransaction.cpp.i:
-	$(MAKE) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/AddUserTransaction.cpp.i
-.PHONY : AddUserTransaction.cpp.i
-
-AddUserTransaction.s: AddUserTransaction.cpp.s
-
-.PHONY : AddUserTransaction.s
-
-# target to generate assembly for a file
-AddUserTransaction.cpp.s:
-	$(MAKE) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/AddUserTransaction.cpp.s
-.PHONY : AddUserTransaction.cpp.s
-
-FindAllTransaction.o: FindAllTransaction.cpp.o
-
-.PHONY : FindAllTransaction.o
-
-# target to build an object file
-FindAllTransaction.cpp.o:
-	$(MAKE) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/FindAllTransaction.cpp.o
-.PHONY : FindAllTransaction.cpp.o
-
-FindAllTransaction.i: FindAllTransaction.cpp.i
-
-.PHONY : FindAllTransaction.i
-
-# target to preprocess a source file
-FindAllTransaction.cpp.i:
-	$(MAKE) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/FindAllTransaction.cpp.i
-.PHONY : FindAllTransaction.cpp.i
-
-FindAllTransaction.s: FindAllTransaction.cpp.s
-
-.PHONY : FindAllTransaction.s
-
-# target to generate assembly for a file
-FindAllTransaction.cpp.s:
-	$(MAKE) -f CMakeFiles/Game.dir/build.make CMakeFiles/Game.dir/FindAllTransaction.cpp.s
-.PHONY : FindAllTransaction.cpp.s
 
 Player.o: Player.cpp.o
 
@@ -294,12 +240,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... Game"
 	@echo "... edit_cache"
-	@echo "... AddUserTransaction.o"
-	@echo "... AddUserTransaction.i"
-	@echo "... AddUserTransaction.s"
-	@echo "... FindAllTransaction.o"
-	@echo "... FindAllTransaction.i"
-	@echo "... FindAllTransaction.s"
 	@echo "... Player.o"
 	@echo "... Player.i"
 	@echo "... Player.s"
