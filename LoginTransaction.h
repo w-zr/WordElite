@@ -15,6 +15,11 @@ public:
 };
 
 void LoginTransaction::Execute() {
+    if (user != nullptr) {
+        std::cout << "You are already logged in." << std::endl;
+        return;
+    }
+
     std::string username;
     std::string password;
     std::cout << "Input username:";
@@ -27,7 +32,7 @@ void LoginTransaction::Execute() {
         std::cout << "User does not exist!" << std::endl;
         return;
     }
-    extern std::shared_ptr<User> user;
+
     extern std::string prompt;
     if (u->GetPass() == password) {
         std::cout << "Login succeeded!" << std::endl;
@@ -36,6 +41,7 @@ void LoginTransaction::Execute() {
     } else
         std::cout << "Password mismatch!" << std::endl;
 }
+
 
 
 #endif //GAME_LOGINTRANSACTION_H

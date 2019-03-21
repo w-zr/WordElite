@@ -17,6 +17,11 @@ public:
 };
 
 void AddUserTransaction::Execute() {
+    if (user != nullptr) {
+        std::cout << "You are already logged in." << std::endl;
+        return;
+    }
+
     std::string name;
     std::string pass;
     std::cout << "Input username:";
@@ -30,8 +35,8 @@ void AddUserTransaction::Execute() {
     }
     ++IN_UID;
     GUserDatabase.addUser(IN_UID, std::make_shared<User>(IN_UID, name, pass));
-    GPlayerDatabase.addPlayer(IN_UID, std::make_shared<Player>(0, 0, 0));
-    GQuestionerDatabase.addQuestioner(IN_UID, std::make_shared<Questioner>(0, 0));
+    GPlayerDatabase.addPlayer(IN_UID, std::make_shared<Player>(IN_UID, 0, 0, 0));
+    GQuestionerDatabase.addQuestioner(IN_UID, std::make_shared<Questioner>(IN_UID, 0, 0));
 }
 
 #endif //GAME_ADDUSERTRANSACTION_H

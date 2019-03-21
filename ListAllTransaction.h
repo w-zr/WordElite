@@ -11,6 +11,10 @@ class ListAllTransaction : public Transaction{
 public:
     ~ListAllTransaction() override = default;
     void Execute() override {
+        if (user == nullptr) {
+            std::cout << "Please login!" << std::endl;
+            return;
+        }
         for (auto &it : GUserDatabase.GetUsers()) {
             std::cout << "UID: " << it.first << " username:" << it.second->GetName() << std::endl;
         }

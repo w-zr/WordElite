@@ -109,6 +109,12 @@
 		<Unit filename="/home/wey/文档/repositories/Game/QuestionerDatabase.h">
 			<Option target="Game"/>
 		</Unit>
+		<Unit filename="/home/wey/文档/repositories/Game/RankPlayerByExpTransaction.h">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="/home/wey/文档/repositories/Game/RankQuestionerByExpTransaction.h">
+			<Option target="Game"/>
+		</Unit>
 		<Unit filename="/home/wey/文档/repositories/Game/Receiver.h">
 			<Option target="Game"/>
 		</Unit>

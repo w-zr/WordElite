@@ -10,6 +10,7 @@ CMakeFiles/Game.dir/main.cpp.o: ../Player.h
 CMakeFiles/Game.dir/main.cpp.o: ../PlayerDatabase.h
 CMakeFiles/Game.dir/main.cpp.o: ../Questioner.h
 CMakeFiles/Game.dir/main.cpp.o: ../QuestionerDatabase.h
+CMakeFiles/Game.dir/main.cpp.o: ../RankPlayerByExpTransaction.h
 CMakeFiles/Game.dir/main.cpp.o: ../Receiver.h
 CMakeFiles/Game.dir/main.cpp.o: ../Role.h
 CMakeFiles/Game.dir/main.cpp.o: ../Transaction.h

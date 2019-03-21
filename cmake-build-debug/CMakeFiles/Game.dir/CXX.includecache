@@ -42,6 +42,16 @@ Role.h
 Questioner.h
 /home/wey/文档/repositories/Game/Questioner.h
 
+/home/wey/文档/repositories/Game/RankPlayerByExpTransaction.h
+vector
+-
+algorithm
+-
+iomanip
+-
+Transaction.h
+/home/wey/文档/repositories/Game/Transaction.h
+
 /home/wey/文档/repositories/Game/Receiver.h
 vector
 -
@@ -89,4 +99,6 @@ AddUserTransaction.h
 /home/wey/文档/repositories/Game/AddUserTransaction.h
 GetInfoTransaction.h
 /home/wey/文档/repositories/Game/GetInfoTransaction.h
+RankPlayerByExpTransaction.h
+/home/wey/文档/repositories/Game/RankPlayerByExpTransaction.h
 

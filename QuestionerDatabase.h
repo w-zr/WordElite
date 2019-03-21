@@ -15,7 +15,7 @@ public:
 
     void addQuestioner(int UID, std::shared_ptr<Questioner>);
 
-    std::map<int, std::shared_ptr<Questioner>> GetPlayers() { return Questioners; };
+    std::map<int, std::shared_ptr<Questioner>> GetQuestioners() { return Questioners; };
 
     void clear() { Questioners.clear(); }
 

@@ -8,7 +8,7 @@
 #include "QuestionerDatabase.h"
 #include "PlayerDatabase.h"
 #include "UserDatabase.h"
-
+extern std::shared_ptr<User> user;
 class Transaction {
 public:
     virtual ~Transaction() = default;

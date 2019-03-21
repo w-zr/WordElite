@@ -12,7 +12,10 @@ public:
     ~ChangeRoleTransaction() override = default;
 
     void Execute() override {
-        extern std::shared_ptr<User> user;
+        if (user == nullptr) {
+            std::cout << "Please login!" << std::endl;
+            return;
+        }
 
         std::cout << "Input the role you want to be(Player/Questioner): ";
         std::string r;

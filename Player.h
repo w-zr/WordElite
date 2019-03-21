@@ -12,8 +12,14 @@ private:
     int exp;
     int level;
     int totalPassedStage;
+    int UID;
 public:
-    Player(int exp, int level, int totalPassedStage) : exp(exp), level(level), totalPassedStage(totalPassedStage) {}
+    Player(int UID, int exp, int level, int totalPassedStage) : exp(exp), level(level),
+                                                                totalPassedStage(totalPassedStage), UID(UID) {}
+
+    int GetUID() {
+        return UID;
+    };
 
     std::string GetRole() override {
         return "Player";

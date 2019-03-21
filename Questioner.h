@@ -11,8 +11,13 @@ class Questioner : public Role {
 private:
     int numberOfQuestions;
     int level;
+    int UID;
 public:
-    Questioner(int n, int l) : numberOfQuestions(n), level(l) {}
+    Questioner(int UID, int n, int l) : numberOfQuestions(n), level(l), UID(UID) {}
+
+    int GetUID() {
+        return UID;
+    }
 
     std::string GetRole() override {
         return "Questioner";
