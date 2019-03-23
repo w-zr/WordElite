@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/Game.dir/main.cpp.o  -o Game 
+/usr/bin/c++  -g   CMakeFiles/Game.dir/main.cpp.o  -o Game -lcurl 

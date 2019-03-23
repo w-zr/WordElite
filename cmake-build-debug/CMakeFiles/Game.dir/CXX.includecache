@@ -18,6 +18,16 @@ Transaction.h
 Transaction.h
 /home/wey/文档/repositories/Game/Transaction.h
 
+/home/wey/文档/repositories/Game/InitialProcess.h
+curl/curl.h
+-
+iostream
+-
+boost/property_tree/json_parser.hpp
+-
+boost/property_tree/ptree.hpp
+-
+
 /home/wey/文档/repositories/Game/ListAllTransaction.h
 Transaction.h
 /home/wey/文档/repositories/Game/Transaction.h
@@ -43,6 +53,16 @@ Questioner.h
 /home/wey/文档/repositories/Game/Questioner.h
 
 /home/wey/文档/repositories/Game/RankPlayerByExpTransaction.h
+vector
+-
+algorithm
+-
+iomanip
+-
+Transaction.h
+/home/wey/文档/repositories/Game/Transaction.h
+
+/home/wey/文档/repositories/Game/RankQuestionerByExpTransaction.h
 vector
 -
 algorithm
@@ -81,12 +101,12 @@ Role.h
 /home/wey/文档/repositories/Game/Role.h
 
 /home/wey/文档/repositories/Game/UserDatabase.h
+curl/curl.h
+-
 User.h
 /home/wey/文档/repositories/Game/User.h
 
 /home/wey/文档/repositories/Game/main.cpp
-unistd.h
--
 Receiver.h
 /home/wey/文档/repositories/Game/Receiver.h
 LoginTransaction.h
@@ -101,4 +121,8 @@ GetInfoTransaction.h
 /home/wey/文档/repositories/Game/GetInfoTransaction.h
 RankPlayerByExpTransaction.h
 /home/wey/文档/repositories/Game/RankPlayerByExpTransaction.h
+RankQuestionerByExpTransaction.h
+/home/wey/文档/repositories/Game/RankQuestionerByExpTransaction.h
+InitialProcess.h
+/home/wey/文档/repositories/Game/InitialProcess.h
 

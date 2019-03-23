@@ -4,6 +4,7 @@
 CMakeFiles/Game.dir/main.cpp.o: ../AddUserTransaction.h
 CMakeFiles/Game.dir/main.cpp.o: ../ChangeRoleTransactino.h
 CMakeFiles/Game.dir/main.cpp.o: ../GetInfoTransaction.h
+CMakeFiles/Game.dir/main.cpp.o: ../InitialProcess.h
 CMakeFiles/Game.dir/main.cpp.o: ../ListAllTransaction.h
 CMakeFiles/Game.dir/main.cpp.o: ../LoginTransaction.h
 CMakeFiles/Game.dir/main.cpp.o: ../Player.h
@@ -11,6 +12,7 @@ CMakeFiles/Game.dir/main.cpp.o: ../PlayerDatabase.h
 CMakeFiles/Game.dir/main.cpp.o: ../Questioner.h
 CMakeFiles/Game.dir/main.cpp.o: ../QuestionerDatabase.h
 CMakeFiles/Game.dir/main.cpp.o: ../RankPlayerByExpTransaction.h
+CMakeFiles/Game.dir/main.cpp.o: ../RankQuestionerByExpTransaction.h
 CMakeFiles/Game.dir/main.cpp.o: ../Receiver.h
 CMakeFiles/Game.dir/main.cpp.o: ../Role.h
 CMakeFiles/Game.dir/main.cpp.o: ../Transaction.h

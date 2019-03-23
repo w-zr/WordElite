@@ -6,11 +6,16 @@
 #include "GetInfoTransaction.h"
 #include "RankPlayerByExpTransaction.h"
 #include "RankQuestionerByExpTransaction.h"
+#include "InitialProcess.h"
 
 std::shared_ptr<User> user = nullptr;
 std::string prompt;
 
 int main() {
+    InitialProcess initialProcess;
+    initialProcess.init_users();
+    initialProcess.init_players();
+
     std::unique_ptr<Receiver> receiver = std::make_unique<Receiver>();
 
     std::map<std::string, std::unique_ptr<Transaction>> commands;

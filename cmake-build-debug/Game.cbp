@@ -91,6 +91,9 @@
 		<Unit filename="/home/wey/文档/repositories/Game/GetInfoTransaction.h">
 			<Option target="Game"/>
 		</Unit>
+		<Unit filename="/home/wey/文档/repositories/Game/InitialProcess.h">
+			<Option target="Game"/>
+		</Unit>
 		<Unit filename="/home/wey/文档/repositories/Game/ListAllTransaction.h">
 			<Option target="Game"/>
 		</Unit>
