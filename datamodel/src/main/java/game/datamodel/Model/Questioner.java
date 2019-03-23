@@ -18,6 +18,8 @@ public class Questioner {
     @MapsId
     private User user;
 
+    public Questioner() {}
+
     public Questioner(Integer level, Integer numberOfQuestions, User user) {
         this.level = level;
         this.numberOfQuestions = numberOfQuestions;

@@ -12,10 +12,16 @@ std::shared_ptr<User> user = nullptr;
 std::string prompt;
 
 int main() {
+    std::cout << "Initialising..." << std::endl;
     InitialProcess initialProcess;
     initialProcess.init_users();
     initialProcess.init_players();
+    initialProcess.init_questioners();
 
+    GQuestionerDatabase.updateQuestioner(1, 10, 10);
+    GPlayerDatabase.updatePlayer(1, 20, 20, 30);
+    GQuestionerDatabase.updateQuestioner(2, 5, 5);
+    GPlayerDatabase.updatePlayer(2, 5, 5, 5);
     std::unique_ptr<Receiver> receiver = std::make_unique<Receiver>();
 
     std::map<std::string, std::unique_ptr<Transaction>> commands;

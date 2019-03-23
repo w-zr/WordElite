@@ -8,13 +8,11 @@ import game.datamodel.DAO.PlayerDAO;
 import game.datamodel.DAO.QuestionerDAO;
 import game.datamodel.Model.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 public class Controller {
@@ -78,5 +76,30 @@ public class Controller {
         JsonArray jsonArray = new JsonParser().parse(new Gson().toJson(questionerDAOS)).getAsJsonArray();
         object.add("questioners", jsonArray);
         return object.toString();
+    }
+
+    @PutMapping("/players/{id}")
+    String updataPlayer(@PathVariable Integer id, @RequestParam Integer exp, @RequestParam Integer level, @RequestParam Integer totalPassedStage) {
+        Optional<Player> p = playerRepository.findById(id);
+        if (p.isEmpty()) {
+            return "Player " + id + " is not in the database.\n";
+        }
+        p.get().setExp(exp);
+        p.get().setLevel(level);
+        p.get().setTotalPassedStage(totalPassedStage);
+        playerRepository.save(p.get());
+        return "Player " + id + " is updated.\n";
+    }
+
+    @PutMapping("/questioners/{id}")
+    String updateQuestioner(@PathVariable Integer id, @RequestParam Integer level, @RequestParam Integer numberOfQuestions) {
+        Optional<Questioner> q = questionerRepository.findById(id);
+        if (q.isEmpty()) {
+            return "Questioner " + id + " is not in the database.\n";
+        }
+        q.get().setLevel(level);
+        q.get().setNumberOfQuestions(numberOfQuestions);
+        questionerRepository.save(q.get());
+        return "Questioner " + id + " is updated\n";
     }
 }

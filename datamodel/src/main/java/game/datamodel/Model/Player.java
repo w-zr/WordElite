@@ -20,6 +20,8 @@ public class Player {
     @MapsId
     private User user;
 
+    public Player() {}
+
     public Player(Integer exp, Integer level, Integer totalPassedStage, User user) {
         this.exp = exp;
         this.level = level;

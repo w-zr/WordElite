@@ -16,7 +16,7 @@ public:
             return;
         }
         for (auto &it : GUserDatabase.GetUsers()) {
-            std::cout << "UID: " << it.first << " username:" << it.second->GetName() << std::endl;
+            std::cout << "UID: " << it.first << "\t\tusername: " << it.second->GetName() << std::endl;
         }
     }
 };

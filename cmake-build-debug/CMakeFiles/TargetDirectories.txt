@@ -1,3 +1,0 @@
-/home/wey/文档/repositories/Game/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/wey/文档/repositories/Game/cmake-build-debug/CMakeFiles/Game.dir
-/home/wey/文档/repositories/Game/cmake-build-debug/CMakeFiles/edit_cache.dir
