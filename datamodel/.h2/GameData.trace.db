@@ -141,3 +141,6 @@ org.h2.message.DbException: The connection was not closed by the application and
 Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the application and is garbage collected [90018-197]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
 	... 18 more
+2019-04-12 17:07:11 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "DIFFICULTY[*]"; expected "DELETE, DROP, DECLARE, DEALLOCATE, {"; SQL statement:
+DIFFICULTY [42001-197]

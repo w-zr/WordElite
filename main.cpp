@@ -1,27 +1,31 @@
 #include "Receiver.h"
 #include "LoginTransaction.h"
-#include "ChangeRoleTransactino.h"
+#include "ChangeRoleTransaction.h"
 #include "ListAllTransaction.h"
 #include "AddUserTransaction.h"
 #include "GetInfoTransaction.h"
 #include "RankPlayerByExpTransaction.h"
 #include "RankQuestionerByExpTransaction.h"
 #include "InitialProcess.h"
+#include "GameTransaction.h"
+#include "AddWordTransaction.h"
 
 std::shared_ptr<User> user = nullptr;
+std::shared_ptr<Questioner> questioner = nullptr;
+std::shared_ptr<Player> player = nullptr;
 std::string prompt;
 
 int main() {
     std::cout << "Initialising..." << std::endl;
-    InitialProcess initialProcess;
-    initialProcess.init_users();
-    initialProcess.init_players();
-    initialProcess.init_questioners();
+//    InitialProcess initialProcess;
+//    initialProcess.init_users();
+//    initialProcess.init_players();
+//    initialProcess.init_questioners();
 
-    GQuestionerDatabase.updateQuestioner(1, 10, 10);
-    GPlayerDatabase.updatePlayer(1, 20, 20, 30);
-    GQuestionerDatabase.updateQuestioner(2, 5, 5);
-    GPlayerDatabase.updatePlayer(2, 5, 5, 5);
+//    GQuestionerDatabase.updateQuestioner(1, 10, 10);
+//    GPlayerDatabase.updatePlayer(1, 20, 20, 30);
+//    GQuestionerDatabase.updateQuestioner(2, 5, 5);
+//    GPlayerDatabase.updatePlayer(2, 5, 5, 5);
     std::unique_ptr<Receiver> receiver = std::make_unique<Receiver>();
 
     std::map<std::string, std::unique_ptr<Transaction>> commands;
@@ -34,6 +38,10 @@ int main() {
             std::pair<std::string, std::unique_ptr<Transaction>>("rankplayers", new RankPlayerByExpTransaction()));
     commands.insert(std::pair<std::string, std::unique_ptr<Transaction>>("rankquestioners",
                                                                          new RankQuestionerByExpTransaction()));
+    commands.insert(std::pair<std::string, std::unique_ptr<Transaction>>("newGame",
+                                                                         new GameTransaction()));
+    commands.insert(std::pair<std::string, std::unique_ptr<Transaction>>("addWord",
+                                                                         new AddWordTransaction()));
 
     prompt = "Word Elite>";
     while (true) {

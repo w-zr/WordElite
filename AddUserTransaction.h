@@ -13,7 +13,6 @@ class AddUserTransaction : public Transaction {
 public:
     ~AddUserTransaction() override = default;
     void Execute() override;
-
 };
 
 void AddUserTransaction::Execute() {
