@@ -17,13 +17,13 @@ public:
             return;
         }
 
-        std::cout << "Input the role you want to be(Player/Questioner): ";
+        std::cout << "Input the role you want to be([P]layer/[Q]uestioner): ";
         std::string r;
         std::cin >> r;
         std::shared_ptr<Role> role;
-        if (r == "Player")
+        if (r == "Player" || r == "P" || r == "p")
             role = GPlayerDatabase.FindByUID(user->GetUID());
-        else if (r == "Questioner") {
+        else if (r == "Questioner" || r == "Q" || r == "q") {
             role = GQuestionerDatabase.FindByUID(user->GetUID());
         } else {
             std::cout << "invalid role! try again..." << std::endl;

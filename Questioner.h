@@ -13,7 +13,7 @@ private:
     int level;
     int UID;
 public:
-    Questioner(int UID, int n, int l) : numberOfQuestions(n), level(l), UID(UID) {}
+    Questioner(int UID, int l, int n) : numberOfQuestions(n), level(l), UID(UID) {}
 
     int GetUID() {
         return UID;

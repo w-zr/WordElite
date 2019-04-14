@@ -46,7 +46,7 @@ void UserDatabase::addUser(int UID, std::shared_ptr<User> e, bool send) {
         curl = curl_easy_init();
         if (curl) {
             curl_easy_setopt(curl, CURLOPT_URL, "localhost:8080/users");
-            std::string s = "username=" + e->GetName() + "&password=" + e->GetPass();
+            std::string s = "id=" + std::to_string(e->GetUID()) + "&username=" + e->GetName() + "&password=" + e->GetPass();
             curl_easy_setopt(curl, CURLOPT_POSTFIELDS, s.c_str());
 
             res = curl_easy_perform(curl);

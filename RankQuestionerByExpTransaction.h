@@ -30,7 +30,7 @@ public:
         for (auto &it : v) {
             std::cout << std::setw(5) << ++rank;
             std::cout << std::setw(10) << GUserDatabase.FindByUID(it->GetUID())->GetName();
-            std::cout << std::setw(10) << it->GetLevel() << std::endl;
+            std::cout << std::setw(10) << it->GetNumberOfQuestions() << std::endl;
         }
     }
 

@@ -17,15 +17,12 @@ std::string prompt;
 
 int main() {
     std::cout << "Initialising..." << std::endl;
-//    InitialProcess initialProcess;
-//    initialProcess.init_users();
-//    initialProcess.init_players();
-//    initialProcess.init_questioners();
+    InitialProcess initialProcess;
+    initialProcess.init_users();
+    initialProcess.init_players();
+    initialProcess.init_questioners();
+    initialProcess.init_wordbank();
 
-//    GQuestionerDatabase.updateQuestioner(1, 10, 10);
-//    GPlayerDatabase.updatePlayer(1, 20, 20, 30);
-//    GQuestionerDatabase.updateQuestioner(2, 5, 5);
-//    GPlayerDatabase.updatePlayer(2, 5, 5, 5);
     std::unique_ptr<Receiver> receiver = std::make_unique<Receiver>();
 
     std::map<std::string, std::unique_ptr<Transaction>> commands;
@@ -38,9 +35,9 @@ int main() {
             std::pair<std::string, std::unique_ptr<Transaction>>("rankplayers", new RankPlayerByExpTransaction()));
     commands.insert(std::pair<std::string, std::unique_ptr<Transaction>>("rankquestioners",
                                                                          new RankQuestionerByExpTransaction()));
-    commands.insert(std::pair<std::string, std::unique_ptr<Transaction>>("Game",
+    commands.insert(std::pair<std::string, std::unique_ptr<Transaction>>("game",
                                                                          new GameTransaction()));
-    commands.insert(std::pair<std::string, std::unique_ptr<Transaction>>("addWord",
+    commands.insert(std::pair<std::string, std::unique_ptr<Transaction>>("addword",
                                                                          new AddWordTransaction()));
 
     prompt = "Word Elite>";
@@ -53,6 +50,10 @@ int main() {
             user = nullptr;
             std::cout << "logout succeeded" << std::endl;
             prompt = "Word Elite>";
+            continue;
+        }
+        if(s == "clear"){
+            system("clear");
             continue;
         }
         if (s == "exit") {

@@ -49,21 +49,25 @@ void GameTransaction::Execute() {
         std::string answer;
         std::cin >> answer;
         if (answer == question) {
-            std::cout << "Right Answer" << std::endl << "Exp +50" << std::endl << "Next round will start in 3 seconds."
-                      << std::endl;
+            std::cout << "Right Answer" << std::endl << "Exp +50" << std::endl;
             GPlayerDatabase.updatePlayer(player->GetUID(), player->GetExp() + 50, player->GetLevel(),
                                          player->GetTotalPassedStage() + 1);
-            round++;
             if (round == difficulty) {
-                round = 1;
+                round = 0;
                 difficulty++;
             }
-
-            sleep(3);
+            round++;
+            for(auto i = 3; i > 0; --i) {
+                std::cout << "Next round will start in " << i  << " seconds.\r" << std::flush;
+                sleep(1);
+            }
+            std::system("clear");
         } else {
-            std::cout << "Wrong Answer!" << std::endl << "Game Failed." << std::endl
-                      << "Return to main menu in 3 seconds." << std::endl;
-            sleep(3);
+            std::cout << "Wrong Answer!" << std::endl << "Game Failed." << std::endl;
+            for (auto i = 3; i > 0; --i) {
+                std::cout << "Return to main menu in " << i << " seconds.\r" << std::flush;
+                sleep(1);
+            }
             std::system("clear");
             break;
         }

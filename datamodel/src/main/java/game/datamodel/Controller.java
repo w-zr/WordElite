@@ -8,6 +8,7 @@ import game.datamodel.DAO.PlayerDAO;
 import game.datamodel.DAO.QuestionerDAO;
 import game.datamodel.Model.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.LinkedList;
@@ -29,7 +30,7 @@ public class Controller {
     }
 
     @PostMapping("/users")
-    String addUser(@RequestParam String username, @RequestParam String password) {
+    String addUser(@RequestParam Integer id, @RequestParam String username, @RequestParam String password) {
         User u = new User(username, password);
         Player p = new Player(0, 0, 0, u);
         Questioner q = new Questioner(0, 0, u);
@@ -80,26 +81,13 @@ public class Controller {
 
     @PutMapping("/players/{id}")
     String updataPlayer(@PathVariable Integer id, @RequestParam Integer exp, @RequestParam Integer level, @RequestParam Integer totalPassedStage) {
-        Optional<Player> p = playerRepository.findById(id);
-        if (p.isEmpty()) {
-            return "Player " + id + " is not in the database.\n";
-        }
-        p.get().setExp(exp);
-        p.get().setLevel(level);
-        p.get().setTotalPassedStage(totalPassedStage);
-        playerRepository.save(p.get());
+        playerRepository.update(exp, level, totalPassedStage, id);
         return "Player " + id + " is updated.\n";
     }
 
     @PutMapping("/questioners/{id}")
     String updateQuestioner(@PathVariable Integer id, @RequestParam Integer level, @RequestParam Integer numberOfQuestions) {
-        Optional<Questioner> q = questionerRepository.findById(id);
-        if (q.isEmpty()) {
-            return "Questioner " + id + " is not in the database.\n";
-        }
-        q.get().setLevel(level);
-        q.get().setNumberOfQuestions(numberOfQuestions);
-        questionerRepository.save(q.get());
+        questionerRepository.update(level, numberOfQuestions, id);
         return "Questioner " + id + " is updated\n";
     }
 }
