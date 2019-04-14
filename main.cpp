@@ -38,7 +38,7 @@ int main() {
             std::pair<std::string, std::unique_ptr<Transaction>>("rankplayers", new RankPlayerByExpTransaction()));
     commands.insert(std::pair<std::string, std::unique_ptr<Transaction>>("rankquestioners",
                                                                          new RankQuestionerByExpTransaction()));
-    commands.insert(std::pair<std::string, std::unique_ptr<Transaction>>("newGame",
+    commands.insert(std::pair<std::string, std::unique_ptr<Transaction>>("Game",
                                                                          new GameTransaction()));
     commands.insert(std::pair<std::string, std::unique_ptr<Transaction>>("addWord",
                                                                          new AddWordTransaction()));
