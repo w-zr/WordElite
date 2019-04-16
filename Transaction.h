@@ -11,8 +11,7 @@
 #include "WordDatabase.h"
 
 extern std::shared_ptr<User> user;
-extern std::shared_ptr<Questioner> questioner;
-extern std::shared_ptr<Player> player;
+
 class Transaction {
 public:
     virtual ~Transaction() = default;

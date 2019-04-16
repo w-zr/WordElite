@@ -6,7 +6,7 @@
 #define GAME_PLAYERDATABASE_H
 
 #include "Player.h"
-#include <curl/curl.h>
+#include "HttpRequest.h"
 
 class PlayerDatabase {
 public:
@@ -18,7 +18,7 @@ public:
 
     void addPlayer(int UID, std::shared_ptr<Player>);
 
-    void updatePlayer(int UID, int exp, int level, int totalPassedStage);
+    void updatePlayer(int UID, int exp, int totalPassedStage);
 
     void clear() { Players.clear(); }
 
@@ -38,32 +38,13 @@ void PlayerDatabase::addPlayer(int UID, std::shared_ptr<Player> e) {
     Players[UID] = std::move(e);
 }
 
-void PlayerDatabase::updatePlayer(int UID, int exp, int level, int totalPassedStage) {
+void PlayerDatabase::updatePlayer(int UID, int exp, int totalPassedStage) {
     std::shared_ptr<Player> p = FindByUID(UID);
     p.get()->SetExp(exp);
-    p.get()->SetLevel(level);
     p.get()->SetTotalPassedStage(totalPassedStage);
 
-    CURL *curl;
-    CURLcode res;
-
-    curl = curl_easy_init();
-    if (curl) {
-        using std::to_string;
-        std::string url = "localhost:8080/players/" + to_string(UID);
-        curl_easy_setopt(curl, CURLOPT_URL, url.c_str());
-        curl_easy_setopt(curl, CURLOPT_CUSTOMREQUEST, "PUT");
-        std::string params = "exp=" + to_string(exp) + "&level=" + to_string(level) + "&totalPassedStage=" +
-                             to_string(totalPassedStage);
-        curl_easy_setopt(curl, CURLOPT_POSTFIELDS, params.c_str());
-        res = curl_easy_perform(curl);
-
-        if (res != CURLE_OK) {
-            std::cerr << "curl_easy_perform() failed: " << curl_easy_strerror(res) << std::endl;
-        }
-        curl_easy_cleanup(curl);
-    }
-    curl_global_cleanup();
+    using std::to_string;
+    httpPut("localhost", "8080", "/players/" + to_string(UID), "exp=" + to_string(exp) + "&totalPassedStage=" +
+                                                               to_string(totalPassedStage), 11);
 }
-
 #endif //GAME_PLAYERDATABASE_H

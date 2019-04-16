@@ -45,18 +45,15 @@ std::cout << std::endl;
 "######## ######## ####    ##    ######## "
 
 std::shared_ptr<User> user = nullptr;
-std::shared_ptr<Questioner> questioner = nullptr;
-std::shared_ptr<Player> player = nullptr;
 std::string prompt;
 
+#include "HttpRequest.h"
 int main() {
     std::cout << BANNER<< std::endl;
+    std::cout << httpGet("localhost", "8080", "/", 11) << std::endl;
     std::cout << "输入help获取帮助" << std::endl << std::endl;
-//    InitialProcess initialProcess;
-//    initialProcess.init_users();
-//    initialProcess.init_players();
-//    initialProcess.init_questioners();
-//    initialProcess.init_wordbank();
+    InitialProcess::init_users();
+    InitialProcess::init_wordbank();
 
     std::unique_ptr<Receiver> receiver = std::make_unique<Receiver>();
     std::map<std::string, std::unique_ptr<Transaction>> commands;

@@ -25,9 +25,8 @@ public:
         std::shared_ptr<Questioner> q = GQuestionerDatabase.FindByUID(user->GetUID());
         std::cout
                 << "As a Player: Your EXP: " << p->GetExp()
-                << ". Your Level: " << p->GetLevel() << ". Your PassedStage: " << p->GetTotalPassedStage()
-                << std::endl << "As a Questioner: Your questions: " << q->GetNumberOfQuestions()
-                << " . Your Level: " << q->GetLevel() << std::endl;
+                << ". Your PassedStage: " << p->GetTotalPassedStage() << std::endl
+                << "As a Questioner: Your questions: " << q->GetNumberOfQuestions() << std::endl;
     }
 };
 

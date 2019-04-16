@@ -14,10 +14,20 @@ public class User {
 
     private String password;
 
-    public User(){}
+    private Integer exp;
 
-    public User(String username, String password) {
+    private Integer totalPassedStage;
+
+    private Integer numberOfQuestions;
+
+    public User() {
+    }
+
+    public User(String username, String password, Integer exp, Integer totalPassedStage, Integer numberOfQuestions) {
         this.username = username;
         this.password = password;
+        this.exp = exp;
+        this.totalPassedStage = totalPassedStage;
+        this.numberOfQuestions = numberOfQuestions;
     }
 }

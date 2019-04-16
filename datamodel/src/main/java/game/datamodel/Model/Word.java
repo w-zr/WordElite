@@ -18,20 +18,8 @@ public class Word {
 
     private Integer difficulty;
 
-    public void setWord(String s) {
-        word = s;
-    }
-
-    public void setDifficulty() {
-        difficulty = word.length();
-    }
-
     public String getWord() {
         return word;
-    }
-
-    public Integer getDifficulty() {
-        return difficulty;
     }
 
     public Word(String s) {

@@ -38,8 +38,6 @@ void LoginTransaction::Execute() {
         std::cout << "Login succeeded!" << std::endl;
         prompt = u->GetName() + ">";
         user = std::move(u);
-        questioner = GQuestionerDatabase.FindByUID(user->GetUID());
-        player = GPlayerDatabase.FindByUID(user->GetUID());
     } else
         std::cout << "Password mismatch!" << std::endl;
 }

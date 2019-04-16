@@ -10,10 +10,9 @@
 class Questioner : public Role {
 private:
     int numberOfQuestions;
-    int level;
     int UID;
 public:
-    Questioner(int UID, int l, int n) : numberOfQuestions(n), level(l), UID(UID) {}
+    Questioner(int UID, int n) : numberOfQuestions(n), UID(UID) {}
 
     int GetUID() {
         return UID;
@@ -29,14 +28,6 @@ public:
 
     int GetNumberOfQuestions() {
         return numberOfQuestions;
-    }
-
-    void SetLevel(int l) {
-        level = l;
-    }
-
-    int GetLevel() {
-        return level;
     }
 };
 

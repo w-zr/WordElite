@@ -33,9 +33,10 @@ void AddUserTransaction::Execute() {
         return;
     }
     ++IN_UID;
-    GUserDatabase.addUser(IN_UID, std::make_shared<User>(IN_UID, name, pass), true);
-    GPlayerDatabase.addPlayer(IN_UID, std::make_shared<Player>(IN_UID, 0, 0, 0));
-    GQuestionerDatabase.addQuestioner(IN_UID, std::make_shared<Questioner>(IN_UID, 0, 0));
+    std::cout << httpPost("localhost", "8080", "/users", "username=" + name + "&password=" + pass, 11);
+    GUserDatabase.addUser(IN_UID, std::make_shared<User>(IN_UID, name, pass));
+    GPlayerDatabase.addPlayer(IN_UID, std::make_shared<Player>(IN_UID, 0, 0));
+    GQuestionerDatabase.addQuestioner(IN_UID, std::make_shared<Questioner>(IN_UID, 0));
 }
 
 #endif //GAME_ADDUSERTRANSACTION_H

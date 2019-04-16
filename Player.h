@@ -10,12 +10,10 @@
 class Player : public Role {
 private:
     int exp;
-    int level;
     int totalPassedStage;
     int UID;
 public:
-    Player(int UID, int exp, int level, int totalPassedStage) : exp(exp), level(level),
-                                                                totalPassedStage(totalPassedStage), UID(UID) {}
+    Player(int UID, int e, int s) : exp(e), totalPassedStage(s), UID(UID) {}
 
     int GetUID() {
         return UID;
@@ -31,14 +29,6 @@ public:
 
     int GetExp() {
         return exp;
-    }
-
-    void SetLevel(int l) {
-        level = l;
-    }
-
-    int GetLevel() {
-        return level;
     }
 
     void SetTotalPassedStage(int t) {

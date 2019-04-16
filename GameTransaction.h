@@ -8,6 +8,12 @@
 #include "Transaction.h"
 #include <unistd.h>
 
+#define COUNT_BACKWARD(x)                                                               \
+for (auto i = (x); i > 0; --i) {                                                        \
+    std::cout << "Please wait for " << i << " seconds.\r" << std::flush;                \
+    sleep(1);                                                                           \
+}
+
 const int MAXTIME = 5;
 class GameTransaction : public Transaction {
 public:
@@ -25,12 +31,13 @@ void GameTransaction::Execute() {
         std::cout << "Please change your Role to Player." << std::endl;
         return;
     }
-
+    std::cout << "Choose difficulty(1-10):";
     int round = 1;
-    int difficulty = 1;
+    int difficulty;
+    std::cin >> difficulty;
     while (true) {
         if (!GWordDatabase.GetOneWordByDifficulty(difficulty)) {
-            std::cout << "No word in wordbank." << std::endl;
+            std::cout << "There is no word with chosen difficulty" << std::endl;
             return;
         }
 
@@ -39,35 +46,26 @@ void GameTransaction::Execute() {
         std::cout << "\tRound " << round << "/" << difficulty << "\tDifficulty: " << difficulty << std::endl
                   << std::endl << "Your Question: " << question << std::endl << std::endl;
 
-        for (auto i = std::max(MAXTIME - difficulty + 1, 1); i > 0; --i) {
-            std::cout << "You have " << i << " seconds to remember.\r" << std::flush;
-            sleep(1);
-        }
+        COUNT_BACKWARD(std::max(MAXTIME - difficulty + 1, 1))
 
         std::system("clear");
         std::cout << "Input your answer: ";
         std::string answer;
         std::cin >> answer;
         if (answer == question) {
-            std::cout << "Right Answer" << std::endl << "Exp +50" << std::endl;
-            GPlayerDatabase.updatePlayer(player->GetUID(), player->GetExp() + 50, player->GetLevel(),
-                                         player->GetTotalPassedStage() + 1);
+            std::cout << "Correct" << std::endl << "Exp +50" << std::endl;
+            GPlayerDatabase.updatePlayer(user->GetUID(), dynamic_cast<Player *>((user->GetRole().get()))->GetExp() + 50,
+                                         dynamic_cast<Player *>((user->GetRole().get()))->GetTotalPassedStage() + 1);
             if (round == difficulty) {
                 round = 0;
                 difficulty++;
             }
             round++;
-            for(auto i = 3; i > 0; --i) {
-                std::cout << "Next round will start in " << i  << " seconds.\r" << std::flush;
-                sleep(1);
-            }
+            COUNT_BACKWARD(5)
             std::system("clear");
         } else {
-            std::cout << "Wrong Answer!" << std::endl << "Game Failed." << std::endl;
-            for (auto i = 3; i > 0; --i) {
-                std::cout << "Return to main menu in " << i << " seconds.\r" << std::flush;
-                sleep(1);
-            }
+            std::cout << "Wrong" << std::endl<< std::endl << "\tGame Over" << std::endl;
+            COUNT_BACKWARD(5)
             std::system("clear");
             break;
         }
