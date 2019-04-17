@@ -33,7 +33,7 @@ void AddUserTransaction::Execute() {
         return;
     }
     ++IN_UID;
-    std::cout << httpPost("localhost", "8080", "/users", "username=" + name + "&password=" + pass, 11);
+    std::cout << httpRequest("POST", "localhost", "8080", "/users", "username=" + name + "&password=" + pass);
     GUserDatabase.addUser(IN_UID, std::make_shared<User>(IN_UID, name, pass));
     GPlayerDatabase.addPlayer(IN_UID, std::make_shared<Player>(IN_UID, 0, 0));
     GQuestionerDatabase.addQuestioner(IN_UID, std::make_shared<Questioner>(IN_UID, 0));

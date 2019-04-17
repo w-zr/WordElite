@@ -20,7 +20,7 @@ public class UserController {
     @PostMapping("/users")
     String addUser(@RequestParam String username, @RequestParam String password) {
         userRepository.save(new User(username, password, 0, 0, 0));
-        return "New user saved\n";
+        return "New user saved.\n";
     }
 
     @GetMapping("/")
@@ -38,14 +38,12 @@ public class UserController {
     }
 
     @PutMapping("/players/{id}")
-    boolean updataPlayer(@PathVariable Integer id, @RequestParam Integer exp, @RequestParam Integer totalPassedStage) {
+    void updataPlayer(@PathVariable Integer id, @RequestParam Integer exp, @RequestParam Integer totalPassedStage) {
         userRepository.updatePlayer(exp, totalPassedStage, id);
-        return true;
     }
 
     @PutMapping("/questioners/{id}")
-    boolean updateQuestioner(@PathVariable Integer id, @RequestParam Integer numberOfQuestions) {
+    void updateQuestioner(@PathVariable Integer id, @RequestParam Integer numberOfQuestions) {
         userRepository.updateQuestioner(numberOfQuestions, id);
-        return true;
     }
 }

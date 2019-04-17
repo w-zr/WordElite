@@ -26,7 +26,7 @@ std::cout << "game\t--开始新游戏" << std::endl;    \
 std::cout << "addw\t--添加新词" << std::endl;     \
 std::cout << "clear\t--清屏" << std::endl;        \
 std::cout << "exit\t--退出" << std::endl;         \
-std::cout << std::endl;
+std::cout << std::endl
 
 #define BANNER                                                  \
 "##      ##  #######  ########  ########  \n"                   \
@@ -45,28 +45,31 @@ std::cout << std::endl;
 "######## ######## ####    ##    ######## "
 
 std::shared_ptr<User> user = nullptr;
+
 std::string prompt;
 
-#include "HttpRequest.h"
+using std::string;
+using std::unique_ptr;
+using std::pair;
+
 int main() {
-    std::cout << BANNER<< std::endl;
-    std::cout << httpGet("localhost", "8080", "/", 11) << std::endl;
+    std::cout << BANNER << std::endl;
+    std::cout << httpRequest("GET", "localhost", "8080", "/", "") << std::endl;
     std::cout << "输入help获取帮助" << std::endl << std::endl;
     InitialProcess::init_users();
     InitialProcess::init_wordbank();
 
     std::unique_ptr<Receiver> receiver = std::make_unique<Receiver>();
     std::map<std::string, std::unique_ptr<Transaction>> commands;
-    commands.insert(std::pair<std::string, std::unique_ptr<Transaction>>("signup", new AddUserTransaction()));
-    commands.insert(std::pair<std::string, std::unique_ptr<Transaction>>("login", new LoginTransaction()));
-    commands.insert(std::pair<std::string, std::unique_ptr<Transaction>>("myinfo", new GetInfoTransaction()));
-    commands.insert(std::pair<std::string, std::unique_ptr<Transaction>>("chgr", new ChangeRoleTransaction()));
-    commands.insert(std::pair<std::string, std::unique_ptr<Transaction>>("lsu", new ListAllTransaction()));
-    commands.insert(
-            std::pair<std::string, std::unique_ptr<Transaction>>("rkps", new RankPlayerByExpTransaction()));
-    commands.insert(std::pair<std::string, std::unique_ptr<Transaction>>("rkqs", new RankQuestionerByExpTransaction()));
-    commands.insert(std::pair<std::string, std::unique_ptr<Transaction>>("game", new GameTransaction()));
-    commands.insert(std::pair<std::string, std::unique_ptr<Transaction>>("addw", new AddWordTransaction()));
+    commands.insert(pair<string, unique_ptr<Transaction>>("signup", new AddUserTransaction()));
+    commands.insert(pair<string, unique_ptr<Transaction>>("login", new LoginTransaction()));
+    commands.insert(pair<string, unique_ptr<Transaction>>("myinfo", new GetInfoTransaction()));
+    commands.insert(pair<string, unique_ptr<Transaction>>("chgr", new ChangeRoleTransaction()));
+    commands.insert(pair<string, unique_ptr<Transaction>>("lsu", new ListAllTransaction()));
+    commands.insert(pair<string, unique_ptr<Transaction>>("rkps", new RankPlayerByExpTransaction()));
+    commands.insert(pair<string, unique_ptr<Transaction>>("rkqs", new RankQuestionerByExpTransaction()));
+    commands.insert(pair<string, unique_ptr<Transaction>>("game", new GameTransaction()));
+    commands.insert(pair<string, unique_ptr<Transaction>>("addw", new AddWordTransaction()));
 
     prompt = "Word Elite>";
     while (true) {
@@ -81,7 +84,7 @@ int main() {
             continue;
         }
         if (s == "help") {
-            HELP_INFO
+            HELP_INFO;
             continue;
         }
         if (s == "clear") {

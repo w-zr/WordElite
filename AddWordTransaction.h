@@ -33,7 +33,7 @@ void AddWordTransaction::Execute() {
         GQuestionerDatabase.updateQuestioner(user->GetUID(),
                                              dynamic_cast<Questioner *>(user->GetRole().get())->GetNumberOfQuestions() +
                                              1);
-        httpPost("localhost", "8080", "/words", "word=" + word, 11);
+        std::cout << httpRequest("POST", "localhost", "8080", "/words", "word=" + word);
     } else
         std::cout << "The word already existed! Failed!" << std::endl;
 }

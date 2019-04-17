@@ -44,7 +44,7 @@ void PlayerDatabase::updatePlayer(int UID, int exp, int totalPassedStage) {
     p.get()->SetTotalPassedStage(totalPassedStage);
 
     using std::to_string;
-    httpPut("localhost", "8080", "/players/" + to_string(UID), "exp=" + to_string(exp) + "&totalPassedStage=" +
-                                                               to_string(totalPassedStage), 11);
+    httpRequest("PUT", "localhost", "8080", "/players/" + to_string(UID), "exp=" + to_string(exp) + "&totalPassedStage=" +
+                                                                          to_string(totalPassedStage));
 }
 #endif //GAME_PLAYERDATABASE_H

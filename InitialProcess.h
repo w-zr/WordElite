@@ -16,8 +16,8 @@ using boost::property_tree::read_json;
 class InitialProcess {
 public:
     static void init_users() {
-        std::stringstream out(httpGet("localhost", "8080", "/users", 11));
         ptree pt;
+        std::stringstream out(httpRequest("GET", "localhost", "8080", "/users", ""));
         read_json(out, pt);
         if (pt.count("users")) {
             ptree pchild = pt.get_child("users");
@@ -40,8 +40,8 @@ public:
     }
 
     static void init_wordbank() {
-        std::stringstream out(httpGet("localhost", "8080", "/words", 11));
         ptree pt;
+        std::stringstream out(httpRequest("GET", "localhost", "8080", "/words", ""));
         read_json(out, pt);
         if (pt.count("words")) {
             ptree pchild = pt.get_child("words");

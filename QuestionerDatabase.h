@@ -41,8 +41,7 @@ void QuestionerDatabase::addQuestioner(int UID, std::shared_ptr<Questioner> ques
 void QuestionerDatabase::updateQuestioner(int UID, int numberOfQuestions) {
     std::shared_ptr<Questioner> q = FindByUID(UID);
     q.get()->SetNumberOfQuestions(numberOfQuestions);
-    httpPut("localhost", "8080", "/questioners/" + std::to_string(UID),
-            "numberOfQuestions=" + std::to_string(numberOfQuestions), 11);
+    httpRequest("PUT", "localhost", "8080", "/questioners/" + std::to_string(UID), "numberOfQuestions=" + std::to_string(numberOfQuestions));
 }
 
 

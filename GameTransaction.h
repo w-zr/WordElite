@@ -6,15 +6,17 @@
 #define GAME_GAMETRANSACTION_H
 
 #include "Transaction.h"
-#include <unistd.h>
 
-#define COUNT_BACKWARD(x)                                                               \
-for (auto i = (x); i > 0; --i) {                                                        \
-    std::cout << "Please wait for " << i << " seconds.\r" << std::flush;                \
-    sleep(1);                                                                           \
-}
+#define COUNT_BACKWARD(x, express)                                                      \
+do{                                                                                     \
+    for (auto i = (x); i > 0; --i) {                                                    \
+        std::cout << (express) << i << " seconds.\r" << std::flush;            \
+        sleep(1);                                                                       \
+    }                                                                                   \
+}while(0)
 
-const int MAXTIME = 5;
+constexpr auto MAX_TIME = 5;
+
 class GameTransaction : public Transaction {
 public:
     ~GameTransaction() override = default;
@@ -46,7 +48,7 @@ void GameTransaction::Execute() {
         std::cout << "\tRound " << round << "/" << difficulty << "\tDifficulty: " << difficulty << std::endl
                   << std::endl << "Your Question: " << question << std::endl << std::endl;
 
-        COUNT_BACKWARD(std::max(MAXTIME - difficulty + 1, 1))
+        COUNT_BACKWARD(std::max(MAX_TIME - difficulty + 1, 1), "You have ");
 
         std::system("clear");
         std::cout << "Input your answer: ";
@@ -61,11 +63,11 @@ void GameTransaction::Execute() {
                 difficulty++;
             }
             round++;
-            COUNT_BACKWARD(5)
+            COUNT_BACKWARD(5, "The next round will start in ");
             std::system("clear");
         } else {
             std::cout << "Wrong" << std::endl<< std::endl << "\tGame Over" << std::endl;
-            COUNT_BACKWARD(5)
+            COUNT_BACKWARD(5, "Please wait for ");
             std::system("clear");
             break;
         }

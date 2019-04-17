@@ -9,9 +9,6 @@ import game.datamodel.Model.WordReporitory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @RestController
 public class WordController {
     private final WordReporitory wordReporitory;
@@ -23,7 +20,7 @@ public class WordController {
     @PostMapping("/words")
     String addWord(@RequestParam String word) {
         wordReporitory.save(new Word(word));
-        return "New Word Saved.\n";
+        return "New word saved.\n";
     }
 
     @GetMapping("/words")
