@@ -1,14 +1,4 @@
-#include "Receiver.h"
-#include "LoginTransaction.h"
-#include "ChangeRoleTransaction.h"
-#include "ListAllTransaction.h"
-#include "AddUserTransaction.h"
-#include "GetInfoTransaction.h"
-#include "RankPlayerByExpTransaction.h"
-#include "RankQuestionerByExpTransaction.h"
-#include "InitialProcess.h"
-#include "GameTransaction.h"
-#include "AddWordTransaction.h"
+#include "WordElite.h"
 
 #define HELP_INFO                               \
 std::cout << std::endl;                         \
@@ -48,9 +38,9 @@ std::shared_ptr<User> user = nullptr;
 
 std::string prompt;
 
+using std::pair;
 using std::string;
 using std::unique_ptr;
-using std::pair;
 
 int main() {
     std::cout << BANNER << std::endl;

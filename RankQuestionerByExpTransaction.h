@@ -19,7 +19,7 @@ public:
             std::cout << "Please login!" << std::endl;
             return;
         }
-        std::vector <std::shared_ptr<Questioner>> v;
+        std::vector<std::shared_ptr<Questioner>> v;
         for (auto &it : GQuestionerDatabase.GetQuestioners())
             v.push_back(it.second);
         std::sort(v.begin(), v.end(), more_than_key());
@@ -35,8 +35,8 @@ public:
     }
 
     struct more_than_key {
-        inline bool operator()(const std::shared_ptr <Questioner> &questioner1,
-                               const std::shared_ptr <Questioner> &questioner2) {
+        inline bool operator()(const std::shared_ptr<Questioner> &questioner1,
+                               const std::shared_ptr<Questioner> &questioner2) {
             return (questioner1->GetNumberOfQuestions() > questioner2->GetNumberOfQuestions());
         }
     };

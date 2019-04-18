@@ -5,8 +5,32 @@
 #ifndef GAME_QUESTIONERDATABASE_H
 #define GAME_QUESTIONERDATABASE_H
 
-#include "Questioner.h"
+#include "Role.h"
 #include "HttpRequest.h"
+
+class Questioner : public Role {
+private:
+    int numberOfQuestions;
+    int UID;
+public:
+    Questioner(int UID, int n) : numberOfQuestions(n), UID(UID) {}
+
+    int GetUID() {
+        return UID;
+    }
+
+    std::string GetRole() override {
+        return "Questioner";
+    }
+
+    void SetNumberOfQuestions(int n) {
+        numberOfQuestions = n;
+    }
+
+    int GetNumberOfQuestions() {
+        return numberOfQuestions;
+    }
+};
 
 class QuestionerDatabase {
 public:

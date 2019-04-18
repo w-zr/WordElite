@@ -7,8 +7,42 @@
 #ifndef GAME_PLAYERDATABASE_H
 #define GAME_PLAYERDATABASE_H
 
-#include "Player.h"
 #include "HttpRequest.h"
+#include "Role.h"
+
+class Player : public Role {
+private:
+    int exp;
+    int totalPassedStage;
+    int UID;
+public:
+    Player(int UID, int e, int s) : exp(e), totalPassedStage(s), UID(UID) {}
+
+    int GetUID() {
+        return UID;
+    };
+
+    std::string GetRole() override {
+        return "Player";
+    }
+
+    void SetExp(int e) {
+        exp = e;
+    }
+
+    int GetExp() {
+        return exp;
+    }
+
+    void SetTotalPassedStage(int t) {
+        totalPassedStage = t;
+    }
+
+    int GetTotalPassedStage() {
+        return totalPassedStage;
+    }
+};
+
 
 class PlayerDatabase {
 public:
