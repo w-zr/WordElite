@@ -199,4 +199,4 @@ CTestTestfile.cmake
 _deps
 cmake-build-debug
 
-.h2/
+datamodel/.h2/**
