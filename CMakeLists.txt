@@ -3,8 +3,6 @@ project(Game)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_link_options(-pthread)
-include_directories(/usr/local/boost/include)
-link_directories(/usr/local/boost/lib)
+include_directories(./rapidjson)
 
 add_executable(Game main.cpp Transaction.h UserDatabase.h User.h AddUserTransaction.h Role.h Player.h Questioner.h ListAllTransaction.h Receiver.h PlayerDatabase.h ChangeRoleTransaction.h QuestionerDatabase.h LoginTransaction.h GetInfoTransaction.h RankPlayerByExpTransaction.h RankQuestionerByExpTransaction.h InitialProcess.h GameTransaction.h WordDatabase.h AddWordTransaction.h HttpRequest.h)

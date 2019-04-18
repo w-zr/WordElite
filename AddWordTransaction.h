@@ -29,7 +29,7 @@ void AddWordTransaction::Execute() {
     std::cout << "Input a new word: ";
     std::cin >> word;
 
-    if (GWordDatabase.AddWord(word)) {
+    if (GWordDatabase.addWord(word)) {
         GQuestionerDatabase.updateQuestioner(user->GetUID(),
                                              dynamic_cast<Questioner *>(user->GetRole().get())->GetNumberOfQuestions() +
                                              1);

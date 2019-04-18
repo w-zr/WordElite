@@ -25,7 +25,7 @@ class WordDatabase {
 public:
     ~WordDatabase() = default;
     std::shared_ptr<Word> GetOneWordByDifficulty(int difficulty);
-    bool AddWord(const std::string& word);
+    bool addWord(const std::string &word);
 
 private:
     std::map<int, std::shared_ptr<Word>> Words;
@@ -47,7 +47,7 @@ std::shared_ptr<Word> WordDatabase::GetOneWordByDifficulty(int difficulty) {
     return std::make_shared<Word>(*words.begin()->get());
 }
 
-bool WordDatabase::AddWord(const std::string& word) {
+bool WordDatabase::addWord(const std::string &word) {
     std::hash<std::string> hash_fn;
     size_t hash = hash_fn(word);
     if (Words.count(hash) == 0) {

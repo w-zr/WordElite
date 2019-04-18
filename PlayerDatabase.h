@@ -1,3 +1,5 @@
+#include <utility>
+
 //
 // Created by wey on 19-3-18.
 //
@@ -20,8 +22,6 @@ public:
 
     void updatePlayer(int UID, int exp, int totalPassedStage);
 
-    void clear() { Players.clear(); }
-
 private:
     std::map<int, std::shared_ptr<Player>> Players;
 };
@@ -34,7 +34,7 @@ std::shared_ptr<Player> PlayerDatabase::FindByUID(int UID) {
     return nullptr;
 }
 
-void PlayerDatabase::addPlayer(int UID, std::shared_ptr<Player> e) {
+void PlayerDatabase::addPlayer(int UID, std::shared_ptr<Player >e) {
     Players[UID] = std::move(e);
 }
 

@@ -199,3 +199,4 @@ CTestTestfile.cmake
 _deps
 cmake-build-debug
 
+.h2/

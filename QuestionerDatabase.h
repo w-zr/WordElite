@@ -20,8 +20,6 @@ public:
 
     void updateQuestioner(int UID, int numberOfQuestions);
 
-    void clear() { Questioners.clear(); }
-
 private:
     std::map<int, std::shared_ptr<Questioner>> Questioners;
 };

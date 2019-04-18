@@ -10,7 +10,7 @@
 #include <cstring>
 #include <netdb.h>
 
-std::string httpRequest(const std::string& method, const std::string& host, const std::string& port, const std::string& target,
+const char* httpRequest(const std::string& method, const std::string& host, const std::string& port, const std::string& target,
          const std::string& body) {
     struct addrinfo hints{}, *res;
     int sockfd;
@@ -36,7 +36,7 @@ std::string httpRequest(const std::string& method, const std::string& host, cons
     buf[byte_count] = 0;
 
     close(sockfd);
-    return strstr(buf, "\r\n\r\n") + 4;
+    return strstr(buf, "\r\n\r\n");
 }
 
 #endif //GAME_HTTPREQUEST_H

@@ -21,8 +21,6 @@ public:
 
     void addUser(int UID, std::shared_ptr<User> e);
 
-    void clear() { Users.clear(); }
-
 private:
     std::map<int, std::shared_ptr<User>> Users;
 };
