@@ -14,24 +14,18 @@ class RankQuestionerByExpTransaction : public Transaction {
 public:
     ~RankQuestionerByExpTransaction() override = default;
 
-    void Execute() override {
-        if (user == nullptr) {
-            std::cout << "Please login!" << std::endl;
-            return;
-        }
+    void Execute(int fd, const std::string &parameters) override {
         std::vector<std::shared_ptr<Questioner>> v;
         for (auto &it : GQuestionerDatabase.GetQuestioners())
             v.push_back(it.second);
         std::sort(v.begin(), v.end(), more_than_key());
-        std::cout << std::setw(5) << "Rank";
-        std::cout << std::setw(10) << "Questioner";
-        std::cout << std::setw(10) << "Exp" << std::endl;
+        std::string data = "Rank\t\tQuestioner\t\t\tExp#";
         int rank = 0;
-        for (auto &it : v) {
-            std::cout << std::setw(5) << ++rank;
-            std::cout << std::setw(10) << GUserDatabase.FindByUID(it->GetUID())->GetName();
-            std::cout << std::setw(10) << it->GetNumberOfQuestions() << std::endl;
-        }
+        for (auto &it : v)
+            data += std::to_string(++rank) + "\t\t" + GUserDatabase.FindByUID(it->GetUID())->GetName() + "\t\t\t" +
+                    std::to_string(it->GetNumberOfQuestions()) + "#";
+        data += '\n';
+        rio::writen(fd, data.data(), data.length());
     }
 
     struct more_than_key {

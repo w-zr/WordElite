@@ -16,8 +16,10 @@ class Transaction {
 public:
     virtual ~Transaction() = default;
 
-    virtual void Execute() = 0;
+    virtual void Execute(int fd, const std::string &parameters) = 0;
+
 };
-
-
+namespace Commands{
+    std::map<std::string, Transaction* > commands;
+}
 #endif //GAME_TRANSACTION_H

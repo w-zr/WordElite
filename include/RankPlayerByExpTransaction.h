@@ -14,25 +14,18 @@ class RankPlayerByExpTransaction : public Transaction {
 public:
     ~RankPlayerByExpTransaction() override = default;
 
-    void Execute() override {
-        if (user == nullptr) {
-            std::cout << "Please login!" << std::endl;
-            return;
-        }
-
+    void Execute(int fd, const std::string &parameters) override {
         std::vector<std::shared_ptr<Player>> v;
         for (auto &it : GPlayerDatabase.GetPlayers())
             v.push_back(it.second);
         std::sort(v.begin(), v.end(), more_than_key());
-        std::cout << std::setw(5) << "Rank";
-        std::cout << std::setw(10) << "Player";
-        std::cout << std::setw(10) << "Exp" << std::endl;
+        std::string data = "Rank\t\tPlayer\t\t\tExp#";
         int rank = 0;
-        for (auto &it : v) {
-            std::cout << std::setw(5) << ++rank;
-            std::cout << std::setw(10) << GUserDatabase.FindByUID(it->GetUID())->GetName();
-            std::cout << std::setw(10) << it->GetExp() << std::endl;
-        }
+        for (auto &it : v)
+            data += std::to_string(++rank) + "\t\t" + GUserDatabase.FindByUID(it->GetUID())->GetName() + "\t\t\t" +
+                    std::to_string(it->GetExp()) + "#";
+        data += '\n';
+        rio::writen(fd, data.data(), data.length());
     }
 
     struct more_than_key {

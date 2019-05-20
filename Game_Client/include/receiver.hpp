@@ -5,21 +5,22 @@
 #ifndef GAME_RECEIVER_H
 #define GAME_RECEIVER_H
 
+#include "transaction.hpp"
 #include <vector>
-#include "Transaction.h"
 
-class Receiver {
+class receiver {
 public:
-    virtual ~Receiver() = default;
+    virtual ~receiver() = default;
+    receiver() = default;
 
-    void StoreAndExecute(Transaction *transaction){
+    void StoreAndExecute(transaction *transaction){
         if(transaction) {
             _transactions.push_back(transaction);
             transaction->Execute();
         }
     }
 private:
-    std::vector<Transaction *> _transactions;
+    std::vector<transaction *> _transactions;
 };
 
 

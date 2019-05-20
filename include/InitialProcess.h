@@ -18,7 +18,6 @@ public:
         document.Parse(httpRequest("GET", "localhost", "8080", "/users", ""));
         const Value &users = document["users"];
         for (auto &v : users.GetArray()) {
-
             int id = v["id"].GetInt();
             std::string username = v["username"].GetString();
             std::string password = v["password"].GetString();

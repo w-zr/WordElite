@@ -14,6 +14,8 @@ private:
     std::string name;
     std::string pass;
     std::shared_ptr<Role> role{};
+    int fd = -1;
+    double nonce = 0;
 public:
     User(int UID, std::string name, std::string pass) : UID(UID), name(std::move(name)), pass(std::move(pass)) {}
     ~User() = default;
@@ -44,6 +46,22 @@ public:
     }
     std::shared_ptr<Role> GetRole() {
         return role;
+    }
+
+    double GetNonce() {
+        return nonce;
+    }
+
+    void SetNonce(double d) {
+        this->nonce = d;
+    }
+
+    int GetFd() {
+        return fd;
+    }
+
+    void SetFd(int i) {
+        this->fd = i;
     }
 
     User& operator=(const User &u) = default;
